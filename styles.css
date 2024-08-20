@@ -38,6 +38,7 @@ h1 {
 }
 
 header {
+  padding-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.4666666667);
   background-image: url("./img/band-landscape.webp");
   background-size: cover;
@@ -51,9 +52,64 @@ section {
   max-width: 80ch;
 }
 
-section img {
+.HeroImg {
   float: left;
   margin: 0 1em 1em 0;
+}
+
+.HeaderButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: 4px solid #23515c;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.album-btn, .play-btn {
+  color: #fff;
+}
+
+.play-btn {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+button:hover {
+  background-color: #23515c;
+  color: #fff;
+}
+
+.Tours {
+  margin: 0 auto;
+}
+
+.Tours strong, .Tours span {
+  margin-right: 0.5rem;
+}
+
+.Tours strong {
+  display: inline-block;
+  width: 10%;
+}
+
+.Tours span {
+  display: inline-block;
+  width: 28%;
+}
+
+.Tours button {
+  display: inline-block;
+  width: 20%;
 }
 
 footer {
@@ -76,7 +132,7 @@ footer h3 {
 
 footer ul {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 footer ul li {
