@@ -85,7 +85,7 @@ section {
   text-align: center;
 }
 
-.Item div:first-child span {
+.ItemTitle {
   font-size: 1.5rem;
   font-weight: bold;
 }

@@ -18,7 +18,7 @@ section { margin: 0 auto; padding: 1em; max-width: 80ch; }
 .MerchSection h2, .CartSection h2 { margin-top: 4rem; }
 .Albums, .Merch { display: flex; justify-content: space-around; flex-wrap: wrap; }
 .Item { display: flex; flex-direction: column; gap: 1rem; margin: 2rem; text-align: center; }
-.Item div:first-child span { font-size: 1.5rem; font-weight: bold; }
+.ItemTitle { font-size: 1.5rem; font-weight: bold; }
 .Item div:last-child span { font-size: 1.2rem; }
 .Item div:last-child { display: flex; justify-content: space-between; align-items: center; }
 .CartHeader { font-weight: bold; }
