@@ -1,15 +1,20 @@
-html, body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
-section { margin: 0 auto; padding: 1em; max-width: 80ch; }
-button { border: 4px solid #23515c; border-radius: 0.2rem; padding: 0.5rem 1rem; background-color: transparent; text-align: center; vertical-align: middle; cursor: pointer; }
-button:hover { background-color: #23515c; color: #fff; }
+html, body { margin: 0; padding: 0; background-color: #e1e4df; font-family: Arial, Helvetica, sans-serif; font-size: 16px; 
+    @media (min-width: 540px) { font-size: 20px; }
+}
+section, nav { margin: 0 auto; padding: 1em; max-width: 80ch; }
+button { border: none; border-radius: 0.2rem; padding: 0.8rem 1.2rem; background-color: #007390;  color: #fff; text-align: center; vertical-align: middle; cursor: pointer; }
+button:hover { background-color: #23515c; }
+a { color: #007390; font-weight: bold; }
+a:hover, a:focus { text-decoration: none; }
+ul { padding: 0; }
 
 header { padding-bottom: 1rem; background-color: #00000077; background-image: url('./img/band-landscape.webp'); background-size: cover; background-position: 10%; background-blend-mode: multiply; }
     header nav { padding-bottom: .1rem; text-align: center; color: #fff; }
-        header ul { margin: 0; border-bottom: 1px solid #ffffff77; font-size: 1.2em; }
-            header li { display: inline; }
-                header a { display: inline-block; padding: 1em 5%; color: #fff; text-decoration: none; }
+        header ul { display: grid; grid-template-columns: 1fr 1fr 1fr; margin: 0; border-bottom: 1px solid #ffffff77; font-size: 1.2em; }
+            header li { list-style-type: none; width: 100%; }
+                header a { display: inline-block; padding: 1em 0; width: 100%; color: #fff; text-decoration: none; }
                 header a:hover, header a:focus { background-color: #ffffff33; }
-        h1 { font-family: 'Times New Roman', Times, serif; font-size: 8vw; font-weight: normal; }
+        h1 { font-family: 'Times New Roman', Times, serif; font-size: 10vw; font-weight: normal; }
     .HeaderButtons { display: flex; gap: 1rem; justify-content: center; align-items: center; }
         .album-btn { color: #fff; }
         .play-btn { border-radius: 50%; width: 3rem; height: 3rem; color: #fff; }
@@ -18,12 +23,13 @@ header { padding-bottom: 1rem; background-color: #00000077; background-image: ur
     .HomepageTours h2 {  }
     .HomepageTours p {  }
         .HomepageTours a {  }
-    .Tours { margin: 0 auto; }
-        .Tours div {  }
-            .Tours strong, .Tours span { margin-right: 0.5rem; }
+    .Tours {  }
+        .Tours div { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #071424; padding: 1rem 0; }
+            .Tours div:last-child { border: none; }
+            .Tours strong, .Tours span {  }
             .Tours strong { display: inline-block; width: 10%; }
             .Tours span { display: inline-block; width: 28%; }
-            .Tours button { display: inline-block; width: 20%; }
+            .Tours button { display: inline-block; width: 22%; padding: 0.8rem 0.2rem; }
 
 .NoticeSection {  }
     .NoticeSection h2 {  }
@@ -33,7 +39,7 @@ header { padding-bottom: 1rem; background-color: #00000077; background-image: ur
     .MusicSection h2, .MerchSection h2, .CartSection h2 { text-align: center; }
     .MerchSection h2, .CartSection h2 { margin-top: 4rem; }
     .Items { display: flex; justify-content: space-around; flex-wrap: wrap; }
-        .Item { display: flex; flex-direction: column; gap: 1rem; margin: 2rem; text-align: center; }
+        .Item { display: flex; flex-direction: column; gap: 1rem; margin: 3rem 1rem; text-align: center; }
             .ItemTitle { font-size: 1.5rem; font-weight: bold; }
             .ItemImage {  }
             .ItemDetails { display: flex; justify-content: space-between; align-items: center; }
@@ -43,18 +49,21 @@ header { padding-bottom: 1rem; background-color: #00000077; background-image: ur
     .MerchSection h2 {  }
 .CartSection {  }
     .CartSection h2 {  }
-    .CartHeader { font-weight: bold; }
-        .CartItem { display: inline-flex; gap: 1rem; align-items: center; margin: 0.5rem; border-bottom: 2px solid #aaa; padding: 0.5rem; width: 40%; font-size: 1.2rem; }
-            .CartItem img { width: 4rem; }
-        .CartPrice { display: inline-flex; margin: 0.5rem; border-bottom: 2px solid #aaa; padding: 0.5rem; width: 15%; }
-        .CartQuantity { display: inline-flex; gap: 1rem; margin: 0.5rem; border-bottom: 2px solid #aaa; padding: 0.5rem; width: 30%; }
-            .CartQuantity input { border: 4px solid #23515c; border-radius: 0.5rem; width: 3rem; background-color: #ddd; font-size: 1.2rem; text-align: center; }
-            .danger-btn { border: none; background-color: #ff0000; color: #fff; font-weight: bold; }
+    .CartHeader { display: flex; font-weight: bold; }
     .CartItems {  }
+        .CartRow { display: flex; align-items: center; }
+        .CartItem { display: inline-flex; gap: 1rem; align-items: center; margin: 0.2rem; border-bottom: 2px solid #aaa; padding-bottom: 0.5rem; width: 45%; height: 3rem; font-size: 1rem; }
+            .CartItem img { width: 2rem;
+                @media (min-width: 540px) { width: 3rem; }
+            }
+        .CartPrice { display: inline-flex; margin: 0.2rem; border-bottom: 2px solid #aaa; padding-bottom: 0.5rem; width: 20%; height: 3rem; align-items: center; }
+        .CartQuantity { display: flex; align-items: center; gap: 0.5rem; margin: 0.2rem; border-bottom: 2px solid #aaa; padding-bottom: 0.5rem; width: 35%; }
+            .CartQuantity input { border: none; border-radius: 0.2rem; padding: 0; width: 3rem; height: 3rem; background-color: #071424; color: #aaa; font-size: 1.2rem; text-align: center; }
+            .danger-btn { display: flex; align-items: center; justify-content: center; border: none; width: 3rem; height: 3rem; background-color: #4e0000; color: #fff; font-weight: bold; }
     .CartFooter { margin: 1rem 1rem 0 0; text-align: right; font-size: 1.4rem; }
         .CartFooter strong {  }
         .CartTotalPrice {  }
-    .purchase-btn { display: block; margin: 1rem auto; text-align: center; font-size: 1.8rem; color: #23515c; font-weight: bold; }
+    .purchase-btn { display: block; margin: 1rem auto; text-align: center; font-size: 1.8rem; font-weight: bold; }
 
 .AboutSection {  }
     .AboutSection h2 {  }
@@ -64,8 +73,8 @@ header { padding-bottom: 1rem; background-color: #00000077; background-image: ur
         @media (min-width: 480px) { width: unset; float: left; margin: 0 1rem 1rem 0; }
     }
 
-footer { background-color: #23515c; color: #fff; }
-    footer .Container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin: 0 auto; max-width: 80ch; }
+footer { background-color: #071424; color: #fff; }
+    footer .Container { display: flex; justify-content: space-between; align-items: center; margin: 0 auto; padding: 1rem; max-width: 80ch; }
         footer h3 { font-size: 1.5em; }
         footer ul { display: flex; gap: 1rem; }
             footer li { list-style: none; }

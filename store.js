@@ -43,7 +43,8 @@ function removeCartItem(event) {
 
 function quantityChanged(event) {
     let input = event.target;
-    if (isNaN(input.value)) {
+    // TODO nice to fix input.value <= 0 not working. For example, if the user enter a negative number, it should be replaced with 1 
+    if (isNaN(input.value) || input.value <= 0) {
         input.value = 1;
     }
     updateCartTotal();
@@ -78,7 +79,7 @@ function addItemToCart(title, price, imageSrc) {
         <span class="CartPrice">${price}</span>
         <div class="CartQuantity">
             <input class="CartQuantityInput" type="number" value="1" min="1">
-            <button class="danger-btn" role="button">REMOVE</button>
+            <button class="danger-btn" role="button">🗑️</button>
         </div>
     `;
     cartRow.innerHTML = cartRowContents;
