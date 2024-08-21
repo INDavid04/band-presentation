@@ -22,6 +22,17 @@ function ready() {
         let button = addToCartButtons[i];
         button.addEventListener('click', addToCartClicked);
     }
+
+    document.getElementsByClassName('purchase-btn')[0].addEventListener('click', purchaseClicked);
+}
+
+function purchaseClicked() {
+    alert('Thank you for your purchase!');
+    let cartItems = document.getElementsByClassName('CartItems')[0];
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild);
+    }
+    updateCartTotal();
 }
 
 function removeCartItem(event) {
@@ -50,19 +61,30 @@ function addToCartClicked(event) {
 
 function addItemToCart(title, price, imageSrc) {
     let cartRow = document.createElement('div');
+    cartRow.classList.add('CartRow');
     let cartItems = document.getElementsByClassName('CartItems')[0];
+    let cartItemNames = cartItems.getElementsByClassName('CartItemTitle');
+    for (let i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title) {
+            alert("This item is already added to the cart!");
+            return;
+        }
+    }
     let cartRowContents = `
-        <div class="Item">
-            <span class="ItemTitle">Album 1</span>
-            <img class="ItemImage" src="./img/a1.webp" alt="Album 1 thumbnail">
-            <div>
-                <span class="ItemPrice">$4.99</span>
-                <button class="shop-item-button" role="button">ADD TO CART</button>
-            </div>
+        <div class="CartItem">
+            <img src="${imageSrc}" alt="Cart item thumbnail" width="100">
+            <span class="CartItemTitle">${title}</span>
+        </div>
+        <span class="CartPrice">${price}</span>
+        <div class="CartQuantity">
+            <input class="CartQuantityInput" type="number" value="1" min="1">
+            <button class="danger-btn" role="button">REMOVE</button>
         </div>
     `;
     cartRow.innerHTML = cartRowContents;
     cartItems.append(cartRow);
+    cartRow.getElementsByClassName('danger-btn')[0].addEventListener('click', removeCartItem);
+    cartRow.getElementsByClassName('CartQuantityInput')[0].addEventListener('change', updateCartTotal);
 }
 
 function updateCartTotal() {
