@@ -4,37 +4,25 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-  padding-bottom: 0.1rem;
+section {
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 80ch;
+}
+
+button {
+  border: 4px solid #23515c;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
   text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #23515c;
   color: #fff;
-}
-
-nav ul {
-  margin: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4666666667);
-  font-size: 1.2em;
-}
-
-nav li {
-  display: inline;
-}
-
-nav a {
-  display: inline-block;
-  padding: 1em 5%;
-  color: #fff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 8vw;
-  font-weight: normal;
 }
 
 header {
@@ -46,21 +34,78 @@ header {
   background-blend-mode: multiply;
 }
 
-section {
-  margin: 0 auto;
-  padding: 1em;
-  max-width: 80ch;
+header nav {
+  padding-bottom: 0.1rem;
+  text-align: center;
+  color: #fff;
 }
 
-.HeroImg {
-  width: 100%;
+header ul {
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4666666667);
+  font-size: 1.2em;
 }
-@media (min-width: 480px) {
-  .HeroImg {
-    width: unset;
-    float: left;
-    margin: 0 1rem 1rem 0;
-  }
+
+header li {
+  display: inline;
+}
+
+header a {
+  display: inline-block;
+  padding: 1em 5%;
+  color: #fff;
+  text-decoration: none;
+}
+
+header a:hover, header a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 8vw;
+  font-weight: normal;
+}
+
+.HeaderButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-btn {
+  color: #fff;
+}
+
+.play-btn {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  color: #fff;
+}
+
+.Tours {
+  margin: 0 auto;
+}
+
+.Tours strong, .Tours span {
+  margin-right: 0.5rem;
+}
+
+.Tours strong {
+  display: inline-block;
+  width: 10%;
+}
+
+.Tours span {
+  display: inline-block;
+  width: 28%;
+}
+
+.Tours button {
+  display: inline-block;
+  width: 20%;
 }
 
 .MusicSection h2, .MerchSection h2, .CartSection h2 {
@@ -71,7 +116,7 @@ section {
   margin-top: 4rem;
 }
 
-.Albums, .Merch {
+.Items {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -90,14 +135,14 @@ section {
   font-weight: bold;
 }
 
-.Item div:last-child span {
-  font-size: 1.2rem;
-}
-
-.Item div:last-child {
+.ItemDetails {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.ItemDetails span {
+  font-size: 1.2rem;
 }
 
 .CartHeader {
@@ -167,59 +212,15 @@ section {
   font-weight: bold;
 }
 
-.HeaderButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+.AboutSection .HeroImg {
+  width: 100%;
 }
-
-button {
-  border: 4px solid #23515c;
-  border-radius: 0.2rem;
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.album-btn, .play-btn {
-  color: #fff;
-}
-
-.play-btn {
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-}
-
-button:hover {
-  background-color: #23515c;
-  color: #fff;
-}
-
-.Tours {
-  margin: 0 auto;
-}
-
-.Tours strong, .Tours span {
-  margin-right: 0.5rem;
-}
-
-.Tours strong {
-  display: inline-block;
-  width: 10%;
-}
-
-.Tours span {
-  display: inline-block;
-  width: 28%;
-}
-
-.Tours button {
-  display: inline-block;
-  width: 20%;
+@media (min-width: 480px) {
+  .AboutSection .HeroImg {
+    width: unset;
+    float: left;
+    margin: 0 1rem 1rem 0;
+  }
 }
 
 footer {
@@ -245,7 +246,7 @@ footer ul {
   gap: 1rem;
 }
 
-footer ul li {
+footer li {
   list-style: none;
 }
 
