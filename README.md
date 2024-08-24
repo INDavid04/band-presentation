@@ -1,2 +1,3 @@
 # band-presentation
-The project is from Web Dev Simplified
+Project realized following web dev simplified playlist. 
+Check it out right here -> https://www.youtube.com/playlist?list=PLZlA0Gpn_vH-cEDOofOujFIknfZZpIk3a
