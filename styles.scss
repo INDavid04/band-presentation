@@ -4,7 +4,7 @@ html, body { margin: 0; padding: 0; background-color: #e1e4df; font-family: Aria
 section, nav { margin: 0 auto; padding: 1em; max-width: 80ch; }
 button { border: none; border-radius: 0.2rem; padding: 0.8rem 1.2rem; background-color: #63E0FF;  color: #000; text-align: center; vertical-align: middle; cursor: pointer; }
 button:hover { background-color: #23515c; color: #fff; }
-a { color: #63E0FF; font-weight: bold; }
+a { color: #63E0FF; font-weight: bold; text-shadow: 0 0 3px #000; }
 a:hover, a:focus { text-decoration: none; }
 ul { padding: 0; }
 
@@ -16,41 +16,41 @@ header { padding-bottom: 1rem; background-color: #00000077; background-image: ur
                 header a:hover, header a:focus { background-color: #ffffff33; }
         h1 { font-family: 'Times New Roman', Times, serif; font-size: 10vw; font-weight: normal; }
     .HeaderButtons { display: flex; gap: 1rem; justify-content: center; align-items: center; }
-        .album-btn { color: #fff; }
-        .play-btn { border-radius: 50%; width: 3rem; height: 3rem; color: #fff; }
+        .album-btn { color: #000; }
+        .play-btn { border-radius: 50%; width: 3rem; height: 3rem; color: #000; }
 
-.HomepageTours {  }
-    .HomepageTours h2 {  }
-    .HomepageTours p {  }
-        .HomepageTours a {  }
-    .Tours {  }
+// .HomepageTours {  }
+//     .HomepageTours h2 {  }
+//     .HomepageTours p {  }
+//         .HomepageTours a {  }
+//     .Tours {  }
         .Tours div { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #071424; padding: 1rem 0; }
             .Tours div:last-child { border: none; }
-            .Tours strong, .Tours span {  }
+            // .Tours strong, .Tours span {  }
             .Tours strong { display: inline-block; width: 10%; }
             .Tours span { display: inline-block; width: 28%; }
             .Tours button { display: inline-block; width: 22%; padding: 0.8rem 0.2rem; }
 
-.NoticeSection {  }
-    .NoticeSection h2 {  }
-    .NoticeSection p {  }
-        .NoticeSection a {  }
-.MusicSection {  }
+// .NoticeSection {  }
+//     .NoticeSection h2 {  }
+//     .NoticeSection p {  }
+//         .NoticeSection a {  }
+// .MusicSection {  }
     .MusicSection h2, .MerchSection h2, .CartSection h2 { text-align: center; }
     .MerchSection h2, .CartSection h2 { margin-top: 4rem; }
     .Items { display: flex; justify-content: space-around; flex-wrap: wrap; }
         .Item { display: flex; flex-direction: column; gap: 1rem; margin: 3rem 1rem; text-align: center; }
             .ItemTitle { font-size: 1.5rem; font-weight: bold; }
-            .ItemImage {  }
+            // .ItemImage {  }
             .ItemDetails { display: flex; justify-content: space-between; align-items: center; }
                 .ItemDetails span { font-size: 1.2rem; }
-                .ItemDetails button {  }
-.MerchSection {  }
-    .MerchSection h2 {  }
-.CartSection {  }
-    .CartSection h2 {  }
+                // .ItemDetails button {  }
+// .MerchSection {  }
+//     .MerchSection h2 {  }
+// .CartSection {  }
+//     .CartSection h2 {  }
     .CartHeader { display: flex; font-weight: bold; }
-    .CartItems {  }
+    // .CartItems {  }
         .CartRow { display: flex; align-items: center; }
         .CartItem { display: inline-flex; gap: 1rem; align-items: center; margin: 0.2rem; border-bottom: 2px solid #aaa; padding-bottom: 0.5rem; width: 45%; height: 3rem; font-size: 1rem; }
             .CartItem img { width: 2rem;
@@ -61,14 +61,14 @@ header { padding-bottom: 1rem; background-color: #00000077; background-image: ur
             .CartQuantity input { border: none; border-radius: 0.2rem; padding: 0; width: 3rem; height: 3rem; background-color: #071424; color: #aaa; font-size: 1.2rem; text-align: center; }
             .danger-btn { display: flex; align-items: center; justify-content: center; border: none; width: 3rem; height: 3rem; background-color: #4e0000; color: #fff; font-weight: bold; }
     .CartFooter { margin: 1rem 1rem 0 0; text-align: right; font-size: 1.4rem; }
-        .CartFooter strong {  }
-        .CartTotalPrice {  }
+        // .CartFooter strong {  }
+        // .CartTotalPrice {  }
     .purchase-btn { display: block; margin: 1rem auto; text-align: center; font-size: 1.8rem; font-weight: bold; }
 
-.AboutSection {  }
-    .AboutSection h2 {  }
-    .AboutSection p {  }
-        .AboutSection a {  }
+// .AboutSection {  }
+//     .AboutSection h2 {  }
+//     .AboutSection p {  }
+//         .AboutSection a {  }
     .AboutSection .HeroImg { width: 100%;
         @media (min-width: 480px) { width: unset; float: left; margin: 0 1rem 1rem 0; }
     }
@@ -79,7 +79,7 @@ footer { background-color: #071424; color: #fff; }
             footer h3 { font-size: 1.5em; }
             footer ul { display: flex; gap: 1rem; }
                 footer li { list-style: none; }
-                    footer a {  }
+                    // footer a {  }
                         footer svg { width: 3rem; height: 3rem; }
                         footer svg:hover { opacity: 0.8; }
         footer p { text-align: center; }
