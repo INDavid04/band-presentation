@@ -74,10 +74,12 @@ header { padding-bottom: 1rem; background-color: #00000077; background-image: ur
     }
 
 footer { background-color: #071424; color: #fff; }
-    footer .Container { display: flex; justify-content: space-between; align-items: center; margin: 0 auto; padding: 1rem; max-width: 80ch; }
-        footer h3 { font-size: 1.5em; }
-        footer ul { display: flex; gap: 1rem; }
-            footer li { list-style: none; }
-                footer a {  }
-                    footer svg { width: 3rem; height: 3rem; }
-                    footer svg:hover { opacity: 0.8; }
+    footer .Container { margin: 0 auto; padding: 1rem; max-width: 80ch; }
+        footer .row { display: flex; justify-content: space-between; align-items: center; }
+            footer h3 { font-size: 1.5em; }
+            footer ul { display: flex; gap: 1rem; }
+                footer li { list-style: none; }
+                    footer a {  }
+                        footer svg { width: 3rem; height: 3rem; }
+                        footer svg:hover { opacity: 0.8; }
+        footer p { text-align: center; }

@@ -280,12 +280,15 @@ footer {
 }
 
 footer .Container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin: 0 auto;
   padding: 1rem;
   max-width: 80ch;
+}
+
+footer .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 footer h3 {
@@ -308,4 +311,8 @@ footer svg {
 
 footer svg:hover {
   opacity: 0.8;
+}
+
+footer p {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
