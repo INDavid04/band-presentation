@@ -8,7 +8,7 @@ a { color: #63E0FF; font-weight: bold; text-shadow: 0 0 3px #000; }
 a:hover, a:focus { text-decoration: none; }
 ul { padding: 0; }
 
-header { padding-bottom: 1rem; background-color: #00000077; background-image: url('./img/band-landscape.webp'); background-size: cover; background-position: 10%; background-blend-mode: multiply; }
+header { padding-bottom: 1rem; background-color: #00000077; background-image: url('../img/band-landscape.webp'); background-size: cover; background-position: 10%; background-blend-mode: multiply; }
     header nav { padding-bottom: .1rem; text-align: center; color: #fff; }
         header ul { display: grid; grid-template-columns: 1fr 1fr 1fr; margin: 0; border-bottom: 1px solid #ffffff77; font-size: 1.2em; }
             header li { list-style-type: none; width: 100%; }

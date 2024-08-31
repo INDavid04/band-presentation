@@ -50,7 +50,7 @@ ul {
 header {
   padding-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.4666666667);
-  background-image: url("./img/band-landscape.webp");
+  background-image: url("../img/band-landscape.webp");
   background-size: cover;
   background-position: 10%;
   background-blend-mode: multiply;
